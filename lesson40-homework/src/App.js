@@ -3,48 +3,68 @@ import Input from './components/Input';
 import Alert from './components/Alert';
 
 function App() {
-  const [text, setText] = useState('');
+  const [defaultValue, setDefaultValue] = useState('');
+  const [focusValue, setFocusValue] = useState('');
+  const [activeValue, setActiveValue] = useState('Text');
+  const [errorValue, setErrorValue] = useState('Text');
 
   return (
     <div style={{ padding: '40px', backgroundColor: '#fcf9dd' }}>
       <h2>Inputs</h2>
 
-      <Input
-        label="Title"
-        placeholder="Placeholder"
-        value=""
-        onChange={() => {}}
-      />
+      <div style={{ backgroundColor: '#f3f3f3', padding: '30px' }}>
+        <div style={{ marginBottom: '20px' }}>
+          <p style={{ color: '#999', fontSize: '12px' }}>DEFAULT</p>
+          <Input
+            label="Title"
+            placeholder="Placeholder"
+            value={defaultValue}
+            onChange={(e) => setDefaultValue(e.target.value)}
+          />
+        </div>
 
-      <Input
-        label="Title"
-        placeholder="Placeholder"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      />
+        <div style={{ marginBottom: '20px' }}>
+          <p style={{ color: '#999', fontSize: '12px' }}>FOCUS (кликни)</p>
+          <Input
+            label="Title"
+            placeholder="Placeholder"
+            value={focusValue}
+            onChange={(e) => setFocusValue(e.target.value)}
+          />
+        </div>
 
-      <Input
-        label="Title"
-        placeholder="Text"
-        value="Text"
-        onChange={() => {}}
-      />
+        <div style={{ marginBottom: '20px' }}>
+          <p style={{ color: '#999', fontSize: '12px' }}>ACTIVE</p>
+          <Input
+            label="Title"
+            placeholder="Text"
+            value={activeValue}
+            onChange={(e) => setActiveValue(e.target.value)}
+          />
+        </div>
 
-      <Input
-        label="Title"
-        placeholder="Text"
-        value="Text"
-        onChange={() => {}}
-        disabled
-      />
+        <div style={{ marginBottom: '20px' }}>
+          <p style={{ color: '#999', fontSize: '12px' }}>DISABLED</p>
+          <Input
+            label="Title"
+            placeholder="Text"
+            value="Text"
+            onChange={() => {}}
+            disabled
+          />
+        </div>
 
-      <Input
-        label="Title"
-        placeholder="Text"
-        value="Text"
-        onChange={() => {}}
-        error="Error text"
-      />
+        <div>
+          <p style={{ color: '#999', fontSize: '12px' }}>ERROR</p>
+          <Input
+            label="Title"
+            placeholder="Text"
+            value={errorValue}
+            onChange={(e) => setErrorValue(e.target.value)}
+            error="Error text"
+          />
+        </div>
+      </div>
 
       <h2 style={{ marginTop: '40px' }}>Alerts</h2>
 
