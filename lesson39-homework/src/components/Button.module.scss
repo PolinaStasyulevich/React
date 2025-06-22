@@ -1,0 +1,29 @@
+.button {
+  background-color: #FF4343;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  display: block;
+  transition: 0.3s ease;
+}
+
+
+.button:hover {
+  background-color: #e71414;
+}
+
+
+
+
+.button:active {
+  background-color: #FF4343;
+  box-shadow: 0 10px 20px rgba(242, 143, 143, 0.5);
+}
+
+

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+.card {
+    font-family: "Jost", sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    max-width: 360px;
+    background-color: #F8F5D2;
+    margin: 20px;
+    display: inline-block;
+}
+
+
+
+
+.title {
+    font-weight: bold;
+    margin-bottom: 63px;
+    font-size: 30px;
+}
+
+
+.price {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.description {
+    margin-bottom: 61px;
+    font-size: 18px;
+}
+
+
+.button {
+    background-color: #D52027;
+    color: white;
+    padding: 25px 78px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-family: "Jost", sans-serif;
+}
+
+
+.button:hover {
+    background-color: #FF4343;
+}
